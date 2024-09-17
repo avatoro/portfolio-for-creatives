@@ -11,6 +11,8 @@
 /* TODO: Delete the Google Fonts below and add the Google Fonts you want to use on your site. Each Google font that you load will slightly increase the download speed of your site so make sure to only included necessary fonts here. */
 
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*
@@ -53,7 +55,7 @@ No media query for `xs` since this is the default in Bootstrap
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  cursor: url("../assets/temp/up-cursor.png"), auto !important;
+  cursor: url("../assets/ava-cursor.png"), auto !important;
   /* TODO: Change the url above to add a custom cursor. Delete the line above if you want to use the default browser cursor. */
 }
 
@@ -78,15 +80,15 @@ html {
 /* TODO: Adjust the variables below, create new variables as desired, and delete the variables that you do not want to use. */
 
 :root {
-  --body-typeface: "Epilogue", sans-serif;
-  --heading-typeface: "Dela Gothic One", sans-serif;
-  --project-title-typeface: "Epilogue", sans-serif;
+  --body-typeface: "DM Mono", sans-serif;
+  --heading-typeface: "Unbounded", sans-serif;
+  --project-title-typeface: "Unbounded", sans-serif;
   --background-color: #fdfdfd;
   --background-color-about: #00C9F5;
   --background-color-footer: #00C9F5;
   --alt-background-color: #000000;
   --background-color-holding-page: rgba(145, 238, 255, 0.6);
-  --h1-color: #ffffff;
+  --h1-color: #000000;
   --h2-color: #ffffff;
   --h3-color: #ffffff;
   --h4-color: #ffffff;
