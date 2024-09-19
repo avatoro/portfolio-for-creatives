@@ -82,7 +82,7 @@ html {
   --body-typeface: "DM Mono", sans-serif;
   --heading-typeface: "Unbounded", sans-serif;
   --project-title-typeface: "Unbounded", sans-serif;
-  --background-color: #fdfdfd;
+  --background-color: #000000;
   --background-color-about: #000;
   --background-color-footer: #000;
   --alt-background-color: #fff;
@@ -104,7 +104,7 @@ html {
   --hover-color: #111;
   --visited-color: #ff87bb;
   --project-title-color: #ED1E79;
-  --project-sidebar-background-color: rgb(0, 0, 0);
+  --project-sidebar-background-color: transparent(0, 0, 0);
   --project-sidebar-text-color: white;
   --heart-color: #ED1E79;
   --holding-page-footer-color: #ff87bb;
