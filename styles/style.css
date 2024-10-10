@@ -82,11 +82,11 @@ html {
   --body-typeface: "DM Mono", sans-serif;
   --heading-typeface: "Unbounded", sans-serif;
   --project-title-typeface: "Unbounded", sans-serif;
-  --background-color: #000000;
-  --background-color-about: #000;
-  --background-color-footer: #000;
-  --alt-background-color: #000000;
-  --background-color-holding-page: #000000;
+  --background-color: #0D0813;
+  --background-color-about: #0D0813;
+  --background-color-footer: #0D0813;
+  --alt-background-color: #0D0813;
+  --background-color-holding-page: #0D0813;
   --h1-color: #fff;
   --h2-color: #ED1E79;
   --h3-color: #ED1E79;
@@ -99,15 +99,15 @@ html {
   --overlay-color: #ED1E79;
   --overlay-title-color: #ffffff;
   --overlay-description-color: #ffffff;
-  --hyperlink-color: #ff87bb;
+  --hyperlink-color: #ffffff;
   --hyperlink-alternate-color: rgb(255, 0, 170);
-  --hover-color: #111;
-  --visited-color: #ff87bb;
+  --hover-color: #FF97C5;
+  --visited-color: #ffffff;
   --project-title-color: #ED1E79;
   --project-sidebar-background-color: transparent(0, 0, 0);
   --project-sidebar-text-color: white;
   --heart-color: #ED1E79;
-  --holding-page-footer-color: #ff87bb;
+  --holding-page-footer-color: #FF97C5;
   --text-selection-background-color: #ED1E79;
   --stroke-shadow-color: rgba(0, 0, 0, 0.4);
 }
@@ -152,7 +152,7 @@ h1 {
   font-size: 2.25rem;
   font-weight: 600;
   font-family: var(--heading-typeface);
-  margin-bottom: 1rem;
+  margin-bottom: .25rem;
   color: var(--h1-color);
 }
 
@@ -202,8 +202,18 @@ em {
   font-size: 0.875rem;
 }
 
+
 .hero-headline {
   color: var(--overlay-color);
+}
+
+.hero-ava-name {
+  font-size: 4rem 
+}
+
+.hero-subhead {
+  font-size: 2.725rem;
+  color: #ffffff
 }
 
 .project-title {
