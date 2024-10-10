@@ -512,6 +512,95 @@ a:active {
   margin-top: 1rem;
 }
 
+.socials-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+
+  
+.linkedin-icon {
+  padding: .25rem;
+  position: relative;
+  transition: opacity 1s ease-out;
+}
+
+.linkedin-icon .linkedin-hover {
+  padding: .25rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.linkedin-icon:hover .linkedin-hover {
+  opacity: 1;
+  display: block;
+  transition: all 350ms;
+}
+
+.behance-icon {
+  padding: .25rem;
+  position: relative;
+  transition: opacity 1s ease-out;
+}
+
+.behance-icon .behance-hover {
+  padding: .25rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  transition: 0.3s;
+}
+
+.behance-icon:hover .behance-hover {
+  opacity: 1;
+  display: block;
+}
+
+.instagram-icon {
+  padding: .25rem;
+  position: relative;
+  transition: opacity 1s ease-out;
+}
+
+.instagram-icon .instagram-hover {
+  padding: .25rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  transition: 0.3s;
+}
+
+.instagram-icon:hover .instagram-hover  {
+  opacity: 1;
+  display: block;
+}
+
+.email-icon {
+  padding: .25rem;
+  position: relative;
+  transition: opacity 1s ease-out;
+}
+
+.email-icon .email-hover {
+  padding: .25rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  transition: 0.3s;
+}
+
+.email-icon:hover .email-hover  {
+  opacity: 1;
+  display: block;
+}
+
 .copyright {
   text-align: center;
   color:#000;
