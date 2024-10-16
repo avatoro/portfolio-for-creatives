@@ -343,6 +343,7 @@ a:active {
   width: 50%;
   padding-left: 3rem;
   align-items: center;
+    min-width: 100px;
 }
 
 .header-navigation {
@@ -399,6 +400,12 @@ a:active {
 
 /* Image Frame */
 
+/* Padding around work grid and project page */
+.portfolio,
+.project-wrapper {
+  position: relative;
+  padding: 0.1rem;
+}
 
 svg.logo-clip {
   position: relative;
@@ -411,7 +418,6 @@ svg.logo-clip {
   aspect-ratio: 2.7 / 2;
   max-width: 100%;
   max-height: 100%;
-  background: url(http://127.0.0.1:5500/assets/branding-images/test.jpg);
   background-position: center;
   background-size: contain;
   transition: background .04s ease;
@@ -422,7 +428,6 @@ svg.logo-clip {
   aspect-ratio: 2.7 / 2;
   max-width: 100%;
   max-height: 100%;
-  background: url(http://127.0.0.1:5500/assets/branding-images/test.jpg);
   background-position: center;
   background-size: contain;
   transition: background .04s ease;
@@ -433,7 +438,6 @@ svg.logo-clip {
   aspect-ratio: 2.7 / 2;
   max-width: 100%;
   max-height: 100%;
-  background: url(http://127.0.0.1:5500/assets/branding-images/test.jpg);
   background-position: center;
   background-size: contain;
   transition: background .04s ease;
@@ -444,7 +448,6 @@ svg.logo-clip {
   aspect-ratio: 2.7 / 2;
   max-width: 100%;
   max-height: 100%;
-  background: url(http://127.0.0.1:5500/assets/branding-images/test.jpg);
   background-position: center;
   background-size: contain;
   transition: background .04s ease;
@@ -455,7 +458,6 @@ svg.logo-clip {
   aspect-ratio: 2.7 / 2;
   max-width: 100%;
   max-height: 100%;
-  background: url(http://127.0.0.1:5500/assets/branding-images/test.jpg);
   background-position: center;
   background-size: contain;
   transition: background .04s ease;
@@ -466,35 +468,40 @@ svg.logo-clip {
   aspect-ratio: 2.7 / 2;
   max-width: 100%;
   max-height: 100%;
-  background: url(http://127.0.0.1:5500/assets/branding-images/test.jpg);
   background-position: center;
   background-size: contain;
   transition: background .04s ease;
 }
 
-.clipped-1:after,
-.clipped-2:after,
-.clipped-3:after,
-.clipped-4:after,
-.clipped-5:after,
-.clipped-6:after {
-  mix-blend-mode: color;
+.overlay {
   position: absolute;
-  content:'\A';
-  width: 200%;
-  height: 300%;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%;
   background: rgba(237, 30, 121, 1);
-  opacity: 0;
-  transition: all 0.4s;
+  mix-blend-mode: color; 
+  opacity: 0; 
+  transition: opacity 0.4s ease; 
+  z-index: 1;
+} 
+
+.clipped-1:hover .overlay,
+.clipped-2:hover .overlay,
+.clipped-3:hover .overlay,
+.clipped-4:hover .overlay,
+.clipped-5:hover .overlay,
+.clipped-6:hover .overlay {
+  opacity: 1;
 }
 
-.clipped-1:hover:after,
-.clipped-2:hover:after,
-.clipped-3:hover:after,
-.clipped-4:hover:after,
-.clipped-5:hover:after,
-.clipped-6:hover:after {
-  opacity: 1;
+.clipped-1 img,
+.clipped-2 img,
+.clipped-3 img,
+.clipped-4 img,
+.clipped-5 img,
+.clipped-6 img {
+  object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
 /*
@@ -527,11 +534,7 @@ svg.logo-clip {
   flex: 1;
 }
 
-/* Padding around work grid and project page */
-.portfolio,
-.project-wrapper {
-  padding: 0.1rem;
-}
+
 
 /* Defining the work page grid */
 .grid {
@@ -546,31 +549,6 @@ svg.logo-clip {
     height: auto; /* Set a specific height if needed */
   }
   
-
-/* Overlay */
-.overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: 0.75s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 1em;
-  background-color: var(--overlay-color);
-  transition: opacity 0.3s, visibility 0.3s;
-}
-
-.work-page-grid-item:hover .overlay {
-  visibility: visible;
-  opacity: 0.8;
-}
 
 /* 
 
@@ -731,7 +709,8 @@ svg.logo-clip {
   text-align: center;
   color:#000;
   font-size: 0.875rem;
-  padding: 1rem 0rem 0rem 0rem;
+  margin: 0; /* Remove margin */
+  padding: 1rem 0; /* Adjust padding */
 }
 
 /* Project Page 
@@ -912,6 +891,7 @@ svg.logo-clip {
 
 /* Medium devices (tablets, 768px and up) */
 
+
 @media (min-width: 768px) {
   /* TODO: Add styles here for medium devices. */
 }
@@ -973,6 +953,7 @@ svg.logo-clip {
 
   .contact {
     padding: 4rem 4rem 0 4rem;
+
   }
 
  
