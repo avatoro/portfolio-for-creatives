@@ -119,6 +119,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+      margin: 0;
+    padding: 0;
 }
 
 /* The ::selection CSS pseudo-element applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text). */
@@ -366,6 +368,7 @@ a:active {
   text-align: center;
 }
 
+
 .hero-icon {
   font-size: 4rem;
 }
@@ -394,8 +397,131 @@ a:active {
 
 */
 
+/* Image Frame */
 
 
+svg.logo-clip {
+  position: relative;
+  width: 100px; /* or whatever size you need */
+  height: 100px; /* or whatever size you need */
+}
+
+.clipped-1 {
+  clip-path: url(#right-side-up);
+  aspect-ratio: 2.7 / 2;
+  max-width: 100%;
+  max-height: 100%;
+  background: url(http://127.0.0.1:5500/assets/branding-images/test.jpg);
+  background-position: center;
+  background-size: contain;
+  transition: background .04s ease;
+}
+
+.clipped-2 {
+  clip-path: url(#upside-down);
+  aspect-ratio: 2.7 / 2;
+  max-width: 100%;
+  max-height: 100%;
+  background: url(http://127.0.0.1:5500/assets/branding-images/test.jpg);
+  background-position: center;
+  background-size: contain;
+  transition: background .04s ease;
+}
+
+.clipped-3 {
+  clip-path: url(#right-side-up);
+  aspect-ratio: 2.7 / 2;
+  max-width: 100%;
+  max-height: 100%;
+  background: url(http://127.0.0.1:5500/assets/branding-images/test.jpg);
+  background-position: center;
+  background-size: contain;
+  transition: background .04s ease;
+}
+
+.clipped-4 {
+  clip-path: url(#upside-down);
+  aspect-ratio: 2.7 / 2;
+  max-width: 100%;
+  max-height: 100%;
+  background: url(http://127.0.0.1:5500/assets/branding-images/test.jpg);
+  background-position: center;
+  background-size: contain;
+  transition: background .04s ease;
+}
+
+.clipped-5 {
+  clip-path: url(#right-side-up);
+  aspect-ratio: 2.7 / 2;
+  max-width: 100%;
+  max-height: 100%;
+  background: url(http://127.0.0.1:5500/assets/branding-images/test.jpg);
+  background-position: center;
+  background-size: contain;
+  transition: background .04s ease;
+}
+
+.clipped-6 {
+  clip-path: url(#upside-down);
+  aspect-ratio: 2.7 / 2;
+  max-width: 100%;
+  max-height: 100%;
+  background: url(http://127.0.0.1:5500/assets/branding-images/test.jpg);
+  background-position: center;
+  background-size: contain;
+  transition: background .04s ease;
+}
+
+.clipped-1:after,
+.clipped-2:after,
+.clipped-3:after,
+.clipped-4:after,
+.clipped-5:after,
+.clipped-6:after {
+  mix-blend-mode: color;
+  position: absolute;
+  content:'\A';
+  width: 200%;
+  height: 300%;
+  background: rgba(237, 30, 121, 1);
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.clipped-1:hover:after,
+.clipped-2:hover:after,
+.clipped-3:hover:after,
+.clipped-4:hover:after,
+.clipped-5:hover:after,
+.clipped-6:hover:after {
+  opacity: 1;
+}
+
+/*
+ * Tooltip.js styles
+ */
+
+.tooltip-js {
+  position: absolute;
+  background: #000;
+  color: white;
+  padding: 8px;
+  z-index: 999;
+}
+
+.tooltip-js.alt-tooltip {
+  background: #000;
+}
+
+#tooltip {
+ border: 5px solid #ED1E79;
+  border-radius: 0px 30px 0px 30px; 
+  position: absolute;
+  background: #000;
+  color: white;
+  font-size: 1.2em;
+  padding: 1em;
+}
 
 .work-wrapper {
   flex: 1;
@@ -404,23 +530,22 @@ a:active {
 /* Padding around work grid and project page */
 .portfolio,
 .project-wrapper {
-  padding: 0.25rem;
+  padding: 0.1rem;
 }
 
 /* Defining the work page grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr); /* Set to 2 columns */
+  grid-gap: 1rem; /* Adjust gap as needed */
+}
   /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
-}
 
-.work-page-grid-item {
-  width: 100%;
-  height: auto;
-  position: relative;
-  /* Required to contain overlay size */
-}
+
+  .work-page-grid-item {
+    height: auto; /* Set a specific height if needed */
+  }
+  
 
 /* Overlay */
 .overlay {
@@ -498,6 +623,7 @@ a:active {
 
 .global-footer {
   align-items: center;
+  margin: 0;
   background: var(--background-color-footer);
 }
 
@@ -622,12 +748,14 @@ a:active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 5px; /* Adjust this value to your liking */
+    padding: 0; /* Ensure there's no padding */
 }
 
 /* Sidebar */
 .project-aside {
   width: 100%;
-  padding: 1rem;
+  padding: -20rem;
   display: flex;
   flex-direction: column;
   color: var(--project-sidebar-text-color);
@@ -824,7 +952,8 @@ a:active {
 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: -30rem;
+    position: relative;
   }
 
   /* Grayscale filter with full-colour on hover and tap */

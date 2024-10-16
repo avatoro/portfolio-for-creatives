@@ -1,3 +1,12 @@
-<svg width="454" height="341" viewBox="0 0 454 341" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M111.112 341L342.898 341L454 0.214386L274.889 -1.56583e-05L264.016 57.6779L189.984 57.6779L179.111 -2.40316e-05L6.18899e-06 0.214346L111.112 341Z" fill="#ED1E79"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="255.7 858.4 744.3 858.4 978.6 142 601 141.6 578 262.8 422 262.8 399 141.6 21.4 142 255.7 858.4"/>
 </svg>
