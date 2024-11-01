@@ -359,7 +359,6 @@ a:active {
   flex: 1;
   align-items: center;
   justify-content: center;
-  padding: 2rem 4rem;
   text-align: center;
 }
 
@@ -395,10 +394,16 @@ a:active {
 /* Image Frame */
 
 /* Padding around work grid and project page */
-.portfolio,
+.portfolio {
+  display: flex; 
+  
+}
+
+
 .project-wrapper {
   position: relative;
 }
+
 
 svg.logo-clip {
   position: relative;
@@ -523,7 +528,9 @@ svg.logo-clip {
 }
 
 .work-wrapper {
-  flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 
@@ -537,14 +544,22 @@ svg.logo-clip {
 }
 
 
-  .work-page-grid-item {
-    width: 100%;
+  .work-page-grid-item-left {
+    width: auto;
     height: auto;
-    display: block;
-    margin: 0; 
+    display: flex;
+    margin-right: -7vw;
+    margin-left: 6vw;
     
   }
   
+ .work-page-grid-item-right {
+  width: auto;
+  height: auto;
+  display: flex;
+  margin-left: -7vw;
+  margin-right: 6vw;
+ }
 
 /* 
 
@@ -929,14 +944,14 @@ color: white;
   }
 
   .hero-headline-wrapper {
-    padding: 4rem 8rem;
+    padding: 2.5rem 8rem;
   }
 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: -30rem;
     position: relative;
-    display: grid;
+    display: flex;
   grid-template-columns: repeat(3, 1fr); /* Change to 3 columns for smaller images */
   grid-gap: 1rem;
   }
@@ -1004,12 +1019,15 @@ color: white;
   }
 
   /* Padding around work grid and project page */
-  .portfolio,
+  .portfolio-top-row,
+  .portfolio-bottom-row
   .project-wrapper {
     padding: 0.5rem;
   }
 
-  
+  .portfolio-bottom-row {
+    margin-top: -4vw;
+  }
 
   /* Project Page Flex Direction on Large Devices */
   .project-wrapper {

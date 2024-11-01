@@ -19,11 +19,7 @@
 <!-- Header -->
 
   <body class="work-page">
-    
     <section>
-
- <!-- Header -->
-
       <header class="hero-header">
         <ul class="branding-navigation">
           <li class="logo">
@@ -57,20 +53,24 @@
       </div>
 
 
-<!-- Projects -->
+<!-- Work-->
 
     <main class="work-wrapper">
-      <section class="portfolio">
+
+<!-- Row 1 -->
+
+      <section class="portfolio-top-row">
         <ul class="grid">
+
       
 <!-- Datura -->
 
-<li class="work-page-grid-item">
+<li class="work-page-grid-item-left">
   <div class="projects-wrapper">
     <figure>
       <a href="Datura.html">
       <div class="clipped-1" data-tooltip="DATURA: BRANDING + ILLUSTRATION" class="cursor">
-        <img src="assets/branding-images/test.jpg" alt="Datura Project" />
+        <img src="assets/branding-images/test.jpg" alt="Datura Project" class="cursor"/>
         <div class="overlay"></div>
       </div>
         <div class="project-preview-wrapper">
@@ -112,7 +112,7 @@
 
 <!-- Harvest -->
  
-<li class="work-page-grid-item">
+<li class="work-page-grid-item-right">
   <div class="projects-wrapper">
     <figure>
       <a href="Harvest.html">
@@ -133,10 +133,18 @@
     </figure>
   </div>
 </li>
+</ul>
+</section>
+</body>
+
+<!-- Row 2 -->
+
+  <section class="portfolio-bottom-row">
+    <ul class="grid">
 
   <!-- Cornucopia -->
 
-  <li class="work-page-grid-item">
+  <li class="work-page-grid-item-left">
     <div class="projects-wrapper">
       <figure>
         <a href="Cornucopia.html">
@@ -186,7 +194,7 @@
 
    <!-- TBA -->
 
-   <li class="work-page-grid-item">
+   <li class="work-page-grid-item-right">
     <div class="projects-wrapper">
       <figure>
         <a href="Capstone.html">
@@ -322,6 +330,8 @@
           elm.removeEventListener("mouseover", _onElementMouseOver);
         }
 
+
+
         if (tooltipText) {
           elm.setAttribute("title", "");
           elm.setAttribute("data-tooltip-id", idx);
@@ -345,6 +355,7 @@
   }
 
   function _createTooltip(text, tooltipId) {
+    
     var tooltipElm = document.createElement("div");
     var tooltipText = document.createTextNode(text);
     var options =
@@ -365,6 +376,7 @@
   }
 
   function _onElementMouseMove(evt) {
+    console.log("Mouse move event triggered");
     var tooltipId = this.getAttribute("data-tooltip-id");
     var tooltipElm = _getTooltipElm();
     var options =
@@ -392,6 +404,7 @@
   }
 
   function _onElementMouseOut(evt) {
+    console.log("Mouse out event triggered");
     var tooltipElm = _getTooltipElm();
 
     if (tooltipElm) {
@@ -400,6 +413,7 @@
   }
 
   function _onElementMouseOver(evt) {
+    console.log("Mouse over event triggered");
     var tooltipId = this.getAttribute("data-tooltip-id");
     var tooltipText =
       tooltipId && _tooltips[tooltipId] && _tooltips[tooltipId].text;
