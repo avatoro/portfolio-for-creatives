@@ -332,7 +332,7 @@ a:active {
 
 .branding-navigation {
   min-width: 9rem;
-  padding: 3vw 0vw 3vw 3vw;
+  padding: 3vw 0vw 3vw 1.8vw;
   align-items: center;
 }
 
@@ -482,8 +482,8 @@ svg.logo-clip {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; 
-  height: 100%;
+  width: 200%; 
+  height: 200%;
   background: rgba(237, 30, 121, 1);
   mix-blend-mode: color; 
   opacity: 0; 
@@ -538,6 +538,7 @@ svg.logo-clip {
 display: flex;
 flex-direction: column;
 align-items: center;
+margin: 0rem 10rem 0rem 10rem;
 }
 
 
@@ -550,29 +551,15 @@ align-items: center;
    /* Adjust gap as needed */
 }
 
-.work-page-grid-item {
-  width: auto;
-  height: auto;
-  display: flex;
-  margin: -0.5vw;
-}
 
-  .work-page-grid-item-left {
-    width: auto;
-    height: auto;
-    display: flex;
-    margin-right: -7vw;
-    margin-left: 6vw;
-    
-  }
-  
- .work-page-grid-item-right {
-  width: auto;
-  height: auto;
-  display: flex;
-  margin-left: -7vw;
-  margin-right: 6vw;
- }
+.work-page-grid-item-left,
+.work-page-grid-item-right,
+.work-page-grid-item {
+width: auto;
+height: auto;
+  margin-left: -4vw;
+  margin-right: -4vw;
+}
 
 /* 
 
@@ -601,13 +588,11 @@ color: white;
   padding-left: 4rem;
   padding-right: 4rem;
   flex: 1;
-  grid-template-columns: 1fr 1fr;
 }
 
 .about-item-1 {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  padding-right: 2rem;
 }
 
 .about-item-2 {
@@ -984,6 +969,9 @@ color: white;
     grid-template-columns: repeat(1, 6fr); /* 1 column for smaller screens */
   }
 
+  .portfolio-bottom-row {
+    margin-top: 1vw;
+  }
 
   .work-page-grid-item-left,
   .work-page-grid-item,
@@ -995,6 +983,10 @@ color: white;
     margin-left: 2rem;
     margin-right: 2rem;
   }
+
+  .work-wrapper {
+    margin: 0rem;
+    }
 
   .project-wrapper {
     margin: 0;
@@ -1016,6 +1008,23 @@ padding: 1rem 0rem 0rem;
 
 .project-details {
   padding: 0rem;
+}
+
+.about {
+  display: block;
+  padding: 0rem 3rem 0rem 3rem;
+}
+
+.about-item-1 {
+  padding-bottom: 1rem;
+}
+
+.about-email-callout {
+  font-size: 1.45rem;
+}
+
+.bio {
+  font-size: 1.18rem;
 }
   
 }
@@ -1045,6 +1054,10 @@ padding: 1rem 0rem 0rem;
     font-size: 1rem;
   }
 
+  .branding-navigation {
+    padding: 3vw 0vw 3vw 3.1vw;
+  }
+
   .hero-ava-name {
     font-size: 3rem 
   }
@@ -1058,6 +1071,10 @@ padding: 1rem 0rem 0rem;
     padding-bottom: 4rem;
     padding-top: 2rem;
   }
+
+  .work-wrapper {
+    margin: 0rem 5rem 0rem 5rem;
+    }
 
   .contact {
     margin-bottom: 3rem;
@@ -1086,6 +1103,12 @@ padding: 1rem 0rem 0rem;
 @media (min-width: 992px) {
   /* TODO: Add or adjust styles here for large devices. */
 
+  .work-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0rem 10rem 0rem 10rem;
+    }
 
   .holding-page-title {
     font-size: 2rem;
@@ -1113,12 +1136,13 @@ padding: 1rem 0rem 0rem;
   }
 
   .hero-headline-wrapper {
-    padding: 2.5rem 8rem;
+    padding-top: 0rem;
+    padding-bottom: 4rem;
   }
 
 
   .about {
-    padding: 4rem;
+    padding: 1rem 4rem 0rem 4rem;
     grid-template-columns: 1fr 1fr;
   }
 
