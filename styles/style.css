@@ -344,10 +344,18 @@ a:active {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-around;
   padding: 3rem;
   align-items: center;
 }
+
+.header-navigation li {
+  position: relative;
+  z-index: 1; /* Ensure the links are clickable */
+}
+
+.header-navigation a {
+  z-index: 2;}
 
 .custom-navigation {
   margin-left: 3rem;
@@ -774,22 +782,8 @@ color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  height: 20vw;
 }
 
-.project-image-container-2 {
-  display: flex;
-  align-items: center;
-  justify-content: last baseline;
-  flex-direction: column;
-  
-}
-
-.project-image-column {
-  flex: 33.33%;
-  padding: 5px;
-}
 
 .project-image {
   width: 100%;
@@ -817,14 +811,8 @@ color: white;
 
 .project-details {
   width: 100%;
-  padding: 1rem;
+  padding: 3rem;
   /* TODO: Delete background-image and the three linear gradient colors to remove the gradient background on the project page. Be careful not to delete the closing } */
-  background-image: linear-gradient(
-    -225deg,
-    var(--linear-gradient-color-1) 0%,
-    var(--linear-gradient-color-2) 50%,
-    var(--linear-gradient-color-3) 100%
-  );
 }
 
 /* 
@@ -1059,10 +1047,6 @@ color: white;
     width: 65%;
   }
 
-  .project-image {
-    min-height: 70vh;
-    /* TODO: Delete min-height if you want to remove space between project images on project pages on large devices. It is used for the demo page only. */
-  }
 
   .project-image-container {
     flex-direction: row;
