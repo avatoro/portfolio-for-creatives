@@ -331,7 +331,7 @@ a:active {
 }
 
 .branding-navigation {
-  width: 11vw;
+  min-width: 9rem;
   padding: 3vw 0vw 3vw 3vw;
   align-items: center;
 }
@@ -364,6 +364,7 @@ a:active {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-bottom: 5rem;
 }
 
 
@@ -639,7 +640,7 @@ color: white;
 .contact {
   text-align: center;
   margin-bottom: 3rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .socials-list {
@@ -759,7 +760,9 @@ color: white;
 
 /* Sidebar */
 .project-aside {
-  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 50%;
   padding: -20rem;
   display: flex;
   flex-direction: column;
@@ -819,7 +822,7 @@ color: white;
 
 .project-details {
   width: 100%;
-  padding: 3rem;
+  padding: 0rem 0rem 0rem 3rem;
   /* TODO: Delete background-image and the three linear gradient colors to remove the gradient background on the project page. Be careful not to delete the closing } */
 }
 
@@ -945,8 +948,6 @@ color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: auto;
-    padding-top: 1.3rem;
     padding-left: 0%;
   }
 
@@ -996,6 +997,7 @@ color: white;
   }
 
   .project-wrapper {
+    margin: 0;
     flex-direction: column;
   }
 
@@ -1003,13 +1005,64 @@ color: white;
     justify-content: space-between;
   } 
 
+.arrow-left, .arrow-right {
+padding: 1rem 0rem 0rem;
+}  
+
+.project-aside {
+  padding: 2.5rem;
+  width: 100%;
+} 
+
+.project-details {
+  padding: 0rem;
+}
+  
 }
 
 /* Medium devices (tablets, 768px and up) */
 
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.55rem;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+
+  .hero-ava-name {
+    font-size: 3rem 
+  }
+  
+  .hero-subhead {
+    font-size: 2.25rem;
+    color: #ffffff
+  }
+
+  .hero-headline-wrapper {
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+  }
+
+  .contact {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
 
 .about-item-1 {
 
