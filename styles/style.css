@@ -63,6 +63,7 @@ html {
   box-sizing: inherit;
 }
 
+
 /* Use variable for to easily change your theme's colour scheme and typography.
 
 ██    ██  █████  ██████  ██  █████  ██████  ██      ███████ ███████ 
@@ -405,6 +406,15 @@ a:active {
   
 }
 
+.portfolio-top-row,
+.portfolio-bottom-row
+.project-wrapper {
+  padding: 0.5rem;
+}
+
+.portfolio-bottom-row {
+  margin-top: -4vw;
+}
 
 .project-wrapper {
   position: relative;
@@ -544,11 +554,16 @@ align-items: center;
 /* Defining the work page grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0%;
    /* Adjust gap as needed */
 }
 
+.work-page-grid-item {
+  width: auto;
+  height: auto;
+  display: flex;
+}
 
   .work-page-grid-item-left {
     width: auto;
@@ -898,6 +913,7 @@ color: white;
   color: var(--accent-color);
 }
 
+
 /*
 
 ███    ███ ███████ ██████  ██  █████       ██████  ██    ██ ███████ ██████  ██ ███████ ███████ 
@@ -968,22 +984,13 @@ color: white;
   .hero-subhead {
     font-size: 1rem;
   }
-}
-
-
-/* Medium devices (tablets, 768px and up) */
-
-
-@media (max-width: 768px) {
-
-
   
   /* Change the grid to a single column (1x6 layout) */
   .grid {
-    grid-template-columns: 1fr; /* 1 column for smaller screens */
+    grid-template-columns: repeat(1, 6fr); /* 1 column for smaller screens */
   }
 
-  /* Adjust margins for grid items on smaller screens */
+
   .work-page-grid-item-left,
   .work-page-grid-item,
   .work-page-grid-item-right {
@@ -994,6 +1001,14 @@ color: white;
     margin-left: 2rem;
     margin-right: 2rem;
   }
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+
+@media (max-width: 768px) {
+
 
 .about-item-1 {
 
@@ -1007,10 +1022,17 @@ color: white;
 
 }
 
+.resume-description {
+  line-height: 1.25;
+}
+
+
+
 /* Large devices (desktops, 992px and up) */
 
 @media (min-width: 992px) {
   /* TODO: Add or adjust styles here for large devices. */
+
 
   .holding-page-title {
     font-size: 2rem;
@@ -1039,15 +1061,6 @@ color: white;
 
   .hero-headline-wrapper {
     padding: 2.5rem 8rem;
-  }
-
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: -30rem;
-    position: relative;
-    display: flex;
-  grid-template-columns: repeat(3, 1fr); /* Change to 3 columns for smaller images */
-  grid-gap: 1rem;
   }
 
 
@@ -1098,16 +1111,6 @@ color: white;
     grid-column: 3 / 4;
   }
 
-  /* Padding around work grid and project page */
-  .portfolio-top-row,
-  .portfolio-bottom-row
-  .project-wrapper {
-    padding: 0.5rem;
-  }
-
-  .portfolio-bottom-row {
-    margin-top: -4vw;
-  }
 
   /* Project Page Flex Direction on Large Devices */
   .project-wrapper {
