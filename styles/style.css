@@ -38,7 +38,7 @@ Imported stylesheets. Remove the ones you do not want to use.
 
 /*
 
-X-Small devices (portrait phones, less than 576px) 
+/* X-Small devices (portrait phones, less than 576px) 
 No media query for `xs` since this is the default in Bootstrap 
 
 ███    ███  ██████  ██████  ██ ██      ███████     ███████ ██ ██████  ███████ ████████ 
@@ -46,8 +46,7 @@ No media query for `xs` since this is the default in Bootstrap
 ██ ████ ██ ██    ██ ██████  ██ ██      █████       █████   ██ ██████  ███████    ██    
 ██  ██  ██ ██    ██ ██   ██ ██ ██      ██          ██      ██ ██   ██      ██    ██    
 ██      ██  ██████  ██████  ██ ███████ ███████     ██      ██ ██   ██ ███████    ██    
-                                                                                       
-*/
+*/                                                                        
 
 /* Add Border Box and Smooth Scroll */
 
@@ -337,7 +336,6 @@ a:active {
   width: 50%;
   padding-left: 3rem;
   align-items: center;
-    min-width: 100px;
 }
 
 .header-navigation {
@@ -910,12 +908,92 @@ color: white;
 
 */
 
+@media (max-width: 576px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.55rem;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+
+.hero-header {
+  flex-direction: column;
+}
+
+  .branding-navigation {
+    justify-content: center;
+    width: auto;
+    padding-top: 1.3rem;
+    padding-left: 0%;
+  }
+
+  .logo {
+    width: 20vw;
+  }
+
+  .header-navigation {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  justify-content: space-between;
+  }
+
+  .custom-navigation {
+    margin: 0rem;
+  }
+
+  .hero-headline-wrapper {
+    padding-bottom: 4rem;
+  }
+
+  .hero-ava-name {
+    font-size: 2rem;
+  }
+
+  .hero-subhead {
+    font-size: 1rem;
+  }
+}
+
+
 /* Medium devices (tablets, 768px and up) */
 
 
-@media (min-width: 768px) {
-  /* TODO: Add styles here for medium devices. */
-}
+@media (max-width: 768px) {
+
+
+  
+  /* Change the grid to a single column (1x6 layout) */
+  .grid {
+    grid-template-columns: 1fr; /* 1 column for smaller screens */
+  }
+
+  /* Adjust margins for grid items on smaller screens */
+  .work-page-grid-item-left,
+  .work-page-grid-item,
+  .work-page-grid-item-right {
+    margin-top: -10vw;
+    margin-bottom: -10vw; /* Remove horizontal margins */
+    width: auto; /* Ensure items take full width */
+    height: auto; /* Maintain proper height */
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 
 .about-item-1 {
 
@@ -1099,4 +1177,4 @@ color: white;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
 }
-}
+}}
