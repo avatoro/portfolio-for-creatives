@@ -331,11 +331,8 @@ a:active {
 }
 
 .branding-navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 50%;
-  padding-left: 3rem;
+  width: 11vw;
+  padding: 3vw 0vw 3vw 3vw;
   align-items: center;
 }
 
@@ -403,13 +400,6 @@ a:active {
 /* Padding around work grid and project page */
 .portfolio {
   display: flex; 
-  
-}
-
-.portfolio-top-row,
-.portfolio-bottom-row
-.project-wrapper {
-  padding: 0.5rem;
 }
 
 .portfolio-bottom-row {
@@ -563,6 +553,7 @@ align-items: center;
   width: auto;
   height: auto;
   display: flex;
+  margin: -0.5vw;
 }
 
   .work-page-grid-item-left {
@@ -760,7 +751,7 @@ color: white;
 
 .project-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   margin: 2rem; /* Adjust this value to your liking */
   padding: 0; /* Ensure there's no padding */
@@ -778,7 +769,7 @@ color: white;
   display: flex;
   flex-direction: row;
   flex: 0.5;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .arrow-left,
@@ -951,6 +942,8 @@ color: white;
 }
 
   .branding-navigation {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     width: auto;
     padding-top: 1.3rem;
@@ -1002,6 +995,14 @@ color: white;
     margin-right: 2rem;
   }
 
+  .project-wrapper {
+    flex-direction: column;
+  }
+
+  .project-navigation {
+    justify-content: space-between;
+  } 
+
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -1025,7 +1026,6 @@ color: white;
 .resume-description {
   line-height: 1.25;
 }
-
 
 
 /* Large devices (desktops, 992px and up) */
