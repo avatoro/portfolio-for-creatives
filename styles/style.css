@@ -1272,12 +1272,20 @@ padding: 1rem 0rem 0rem;
   /* TODO: Add styles here for XX-large devices. */
 
   .overlay {
-    height: 1400px;
+    height: 80rem;
   }
 
   .portfolio-bottom-row {
     margin-top: -4.9vw;
   }
+
+}
+
+@media (min-width: 1500px) {
+
+.overlay {
+  height: 100rem;
+}
 
 }
 
@@ -1287,7 +1295,7 @@ padding: 1rem 0rem 0rem;
   }
 
 .overlay {
-  height: 120rem;
+  height: 110rem;
 }
 }
 
