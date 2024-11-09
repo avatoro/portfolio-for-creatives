@@ -961,7 +961,7 @@ color: white;
   }
 
   .hero-headline-wrapper {
-    padding-bottom: 4rem;
+    padding: 9rem 0rem 9rem 0rem;
   }
 
   .hero-ava-name {
@@ -1092,8 +1092,7 @@ padding: 1rem 0rem 0rem;
   }
 
   .hero-headline-wrapper {
-    padding-bottom: 4rem;
-    padding-top: 2rem;
+    padding: 9rem 0rem 12rem 0rem;
   }
 
   .work-wrapper {
