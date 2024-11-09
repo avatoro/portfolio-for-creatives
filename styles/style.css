@@ -866,7 +866,15 @@ color: white;
 
 /* TODO: Customize your 404 Error Page */
 
-
+.error-headline-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 5rem;
+}
 
 /* The best 404 pages have become an art in themselves. Your 404 error page is an opportunity to make a memorable impression on your visitors when they don’t land exactly where they hoped. */
 
@@ -960,7 +968,7 @@ color: white;
     margin: 0rem;
   }
 
-  .hero-headline-wrapper {
+  .error-headline-wrapper {
     padding: 9rem 0rem 9rem 0rem;
   }
 
@@ -1095,7 +1103,7 @@ padding: 1rem 0rem 0rem;
     color: #ffffff
   }
 
-  .hero-headline-wrapper {
+  .error-headline-wrapper {
     padding: 9rem 0rem 12rem 0rem;
   }
 
