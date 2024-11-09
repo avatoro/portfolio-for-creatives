@@ -903,6 +903,14 @@ color: white;
 
 */
 
+@media (max-width: 400px) {
+
+  .overlay {
+    height: 85rem;
+  }
+
+}
+
 @media (max-width: 576px) {
 
   h1 {
