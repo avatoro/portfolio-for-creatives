@@ -1039,6 +1039,10 @@ padding: 1rem 0rem 0rem;
   font-size: 1.18rem;
 }
 
+.resume-description {
+  line-height: 1.7;
+}
+
 .copyright {
     padding: 1rem 3rem 1rem 3rem;
 }
